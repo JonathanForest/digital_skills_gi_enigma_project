@@ -1,4 +1,3 @@
-
 # Here, we import the EnigmaMachine class into our file so that we can use it
 # later. We're importing it from the enigma module that we installed earlier
 # using 'pip install ..
@@ -6,24 +5,39 @@ from .settings import ROTORS, REFLECTOR, RING_SETTINGS, PLUGBOARD
 from .machine import machine
 from .decrypt import brute_force_rotor_position
 
-# The following few lines create an 'instance' of an Enigma Machine. We
-# imported the blueprints earlier, now we are telling Python to use those
-# blueprints to make a version of the Enigma Machine we can interact with.
-# 'Enigma Machine' is the class 'template', 'from_key_sheet' is a function
-# belonging to the EnigmaMachine class. What arguments are we passing to it?
+
+# TODO: I've forgotten to add something so that Python knows the words inside
+# the brackets are a string, what is that?
+filepath = input(Name of the file we need to import: )
+
+cribtext = input("What is a known word that should appear in the text: ")
 
 # Here we are loading the message we need to decrypt.
-with open("message.txt", mode="r") as f:
-    message = f.read()
+with open(filepath, mode="r") as f:
+    # TODO: f.read is a function, what do I need to do for this line to call
+    # the function?
+    message = f.read
 
-result = brute_force_rotor_position(ROTORS, message, "WETTER")
+# This calls the function brute_force_rotor_position, which will try every
+# combination of rotors until it either returns a three letter rotor
+# combination or 0
+result = brute_force_rotor_position(ROTORS, message, cribtext)
 
-if result != 0:
-    machine.set_display(result)
-    message = machine.process_text(message)
+# The brute force attack worked if result is not equal to 0
+# TODO: We need to check if result equals 0, how do we do that?
+# replace the underscores with the stuff you need.
+if _ == _:
+    # Here we print the following words so that the user knows we couldn't
+    # crack the code.
+    print("Could not decrypt :(")
+
 else:
-    message = "could not decrypt :("
+    #Here we set the rotors to the result of the brute force attack.
+    machine.set_display(result)
 
-with open("unencrypted_text.txt", mode="w") as f:
-    f.write(message)
+    # Here we run the decryption on the message we loaded earlier.
+    message = machine.process_text(message)
 
+    # This is the code that writes to the file.
+    with open("unencrypted_text.txt", mode="w") as f:
+        f.write(message)

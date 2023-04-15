@@ -5,6 +5,5 @@ machine = EnigmaMachine.from_key_sheet(
     rotors=ROTORS,
     reflector=REFLECTOR,
     ring_settings=RING_SETTINGS,
-    plugboard_settings=PLUGBOARD
+    plugboard_settings=PLUGBOARD,
 )
-
