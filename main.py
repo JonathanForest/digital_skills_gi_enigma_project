@@ -17,7 +17,7 @@ with open(filepath, mode="r") as f:
     # TODO: f.read is a function. I've written it here but it doesn't actually
     # run., what do I need to do for this line to call/run
     # the function?
-    message = f.read
+    message = f.read()
 
 # This calls the function brute_force_rotor_position, which will try every
 # combination of rotors until it either returns a three letter rotor
