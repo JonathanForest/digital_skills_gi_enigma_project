@@ -1,6 +1,6 @@
-def brute_force_rotor_position(machine, ciphertext, cribtext):
-    """Brute Force Decryption of Enigma Rotors"""
-
+def brute_force_rotor_position(machine, ciphertext, cribtext ):
+    """Brute Force Attack on the Enigma Machine"""
+    
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     # This is the brute force part, where we cycle through all possible

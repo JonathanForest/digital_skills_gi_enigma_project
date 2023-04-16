@@ -1,9 +1,9 @@
 # Here, we import the EnigmaMachine class into our file so that we can use it
 # later. We're importing it from the enigma module that we installed earlier
 # using 'pip install ..
-from .settings import ROTORS, REFLECTOR, RING_SETTINGS, PLUGBOARD
-from .machine import machine
-from .decrypt import brute_force_rotor_position
+from settings import ROTORS, REFLECTOR, RING_SETTINGS, PLUGBOARD
+from machine import machine
+from decrypt import brute_force_rotor_position
 
 
 # TODO: I've forgotten to add something so that Python knows the words inside
