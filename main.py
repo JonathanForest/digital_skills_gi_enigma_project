@@ -8,7 +8,7 @@ from decrypt import brute_force_rotor_position
 
 # TODO: I've forgotten to add something so that Python knows the words inside
 # the brackets are a string, what is that?
-filepath = input(Name of the file we need to import: )
+filepath = input("Name of the file we need to import: ")
 
 cribtext = input("What is a known word that should appear in the text: ")
 
@@ -22,12 +22,12 @@ with open(filepath, mode="r") as f:
 # This calls the function brute_force_rotor_position, which will try every
 # combination of rotors until it either returns a three letter rotor
 # combination or 0
-result = brute_force_rotor_position(ROTORS, message, cribtext)
+result = brute_force_rotor_position(machine, message, cribtext)
 
 # The brute force attack worked if result is not equal to 0
 # TODO: We need to check if result equals 0, how do we do that?
 # replace the underscores with the stuff you need.
-if _ == _:
+if result == 0:
     # Here we print the following words so that the user knows we couldn't
     # crack the code.
     print("Could not decrypt :(")

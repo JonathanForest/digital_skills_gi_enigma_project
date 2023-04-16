@@ -26,7 +26,7 @@ def brute_force_rotor_position(machine, ciphertext, cribtext ):
                 # as we think that works!
 
                 # TODO: Something is missing here...
-                if cribtext in plaintext
+                if cribtext in plaintext:
                     return rotor
 
     # TODO: We need this line to return a 0, how to we do that?
