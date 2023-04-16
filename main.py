@@ -14,7 +14,8 @@ cribtext = input("What is a known word that should appear in the text: ")
 
 # Here we are loading the message we need to decrypt.
 with open(filepath, mode="r") as f:
-    # TODO: f.read is a function, what do I need to do for this line to call
+    # TODO: f.read is a function. I've written it here but it doesn't actually
+    # run., what do I need to do for this line to call/run
     # the function?
     message = f.read
 
