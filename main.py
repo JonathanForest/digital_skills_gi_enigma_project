@@ -8,7 +8,7 @@ from decrypt import brute_force_rotor_position
 
 # TODO: I've forgotten to add something so that Python knows the words inside
 # the brackets are a string, what is that?
-filepath = input("Name of the file we need to import: ")
+filepath = input(Name of the file we need to import: )
 
 cribtext = input("What is a known word that should appear in the text: ")
 
