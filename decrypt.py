@@ -19,7 +19,7 @@ def brute_force_rotor_position(machine, ciphertext, cribtext ):
                 machine.set_display(rotor)
 
                 # TODO: What's wrong with this line?
-                plaintext = machine.process_text(ciphertext)
+                plaintext == machine.process_text(ciphertext)
 
                 # Let's see if we can see our cribtext in the plain/decrypted
                 # text. If it is, we will 'return' the current rotor position
@@ -31,5 +31,5 @@ def brute_force_rotor_position(machine, ciphertext, cribtext ):
 
     # TODO: We need this line to return a 0, how to we do that?
     # Look at the return above for a hint...
-    return 0
+    return _
 

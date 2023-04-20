@@ -16,7 +16,7 @@ machine.
 
 # TODO: I've forgotten to add something so that Python knows the words inside
 # the brackets are a string, what is that?
-filepath = input("Enter the name of the file that contains the encrypted message: ")
+filepath = input(Enter the name of the file that contains the encrypted message: )
 
 cribtext = input("Enter a word that is known to be in the unencrypted message: ")
 
@@ -34,8 +34,8 @@ result = brute_force_rotor_position(machine, message, cribtext)
 
 # The brute force attack worked if result is not equal to 0
 # TODO: We need to check if result equals 0, how do we do that?
-# replace the underscores with the stuff you need.
-if result == 0:
+# replace the underscore with the stuff you need.
+if _ == 0:
     # Here we print the following words so that the user knows we couldn't
     # crack the code.
     print("The code could not be decrypted. :(")
