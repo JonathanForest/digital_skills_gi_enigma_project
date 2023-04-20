@@ -5,12 +5,20 @@ from settings import ROTORS, REFLECTOR, RING_SETTINGS, PLUGBOARD
 from machine import machine
 from decrypt import brute_force_rotor_position
 
+print("""
+PROJECT ENIGMA
+
+This code attempts to brute force an attack on a message encrypted by an Enigma
+machine.
+
+""")
+
 
 # TODO: I've forgotten to add something so that Python knows the words inside
 # the brackets are a string, what is that?
-filepath = input("Name of the file we need to import: ")
+filepath = input("Enter the name of the file that contains the encrypted message: ")
 
-cribtext = input("What is a known word that should appear in the text: ")
+cribtext = input("Enter a word that is known to be in the unencrypted message: ")
 
 # Here we are loading the message we need to decrypt.
 with open(filepath, mode="r") as f:
@@ -30,9 +38,12 @@ result = brute_force_rotor_position(machine, message, cribtext)
 if result == 0:
     # Here we print the following words so that the user knows we couldn't
     # crack the code.
-    print("Could not decrypt :(")
+    print("The code could not be decrypted. :(")
 
 else:
+
+    print("We cracked the code! The rotors will be set to " + result)
+
     #Here we set the rotors to the result of the brute force attack.
     machine.set_display(result)
 
